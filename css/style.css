@@ -1,0 +1,61 @@
+@font-face {
+    font-family: Catamaran-Thin;
+    src: url(../font/Catamaran-Thin.ttf);
+}
+
+@font-face {
+    font-family: Iceland-Regular;
+    src: url(../font/Iceland-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Catamaran-Thin';
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #391D5F;
+    margin: 0;
+    padding: 0 24px;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Iceland-Regular';
+    color: white;
+}
+
+header nav {
+    margin-left: auto;
+    font-size: 18px;
+}
+
+header nav a {
+    margin: 0 12px;
+}
+
+header nav a:hover {
+    color: gray;
+}
+
+header nav a.current {
+    border-bottom: 2px solid white;
+}
+
+header nav a.current:hover {
+    border-bottom: 2px solid gray;
+}
+
+header div.language {
+    display: flex;
+    flex-direction: row;
+    margin-left: 24px;
+}
+
+header div.language p {
+    margin: 0 4px;
+}
