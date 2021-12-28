@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car rental</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link href="./css/style.css" rel="stylesheet" type="text/css">
     <link href="./css/home-page.css" rel="stylesheet" type="text/css">
 </head>
@@ -26,11 +27,72 @@
     <section class="form">
         <h1>Wypożycz samochód już teraz</h1>
         <form>
-            <input type="text" id="city" placeholder="Miasto">
-            <input type="text" id="date-from" placeholder="Data od">
-            <input type="text" id="date-to" placeholder="Data do">
-            <input type="submit" id="submit" value="Szukaj">
+            <div class="input-with-icon">
+                <i class="fa fa-map-marker icon"></i>
+                <input type="text" id="city" class="location" placeholder="Miasto">
+            </div>
+            <div class="input-with-icon">
+                <i class="fa fa-calendar icon"></i>
+                <input type="text" id="date-from" class="date" placeholder="Data od">
+            </div>
+            <div class="input-with-icon">
+                <i class="fa fa-calendar icon"></i>
+                <input type="text" id="date-to" class="date" placeholder="Data do">
+            </div>
+            <input type="submit" id="submit" class="submit" value="Szukaj">
         </form>
     </section>
+
+    <section class="car-types">
+        <div class="type">
+            <img src="./img/osobowe.jpg" alt="Samochody osobowe">
+            <div class="content">
+                <h2>Samochody osobowe</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>    
+            </div>
+        </div>
+        <div class="type">
+            <img src="./img/sportowe.jpg" alt="Samochody sportowe">
+            <div class="content">
+                <h2>Samochody sportowe</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>    
+            </div>
+        </div>
+        <div class="type">
+            <img src="./img/wieloosobowe.jpg" alt="Samochody wieloosobowe">
+            <div class="content">
+                <h2>Samochody wieloosobowe</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>    
+            </div>    
+        </div>
+    </section>
+
+    <section class="locations">
+        <h1>Gdzie nas znajdziesz?</h1>
+        <div class="columns">
+            <div class="column">
+                <p>Białystok</p>
+                <p>Bydgoszcz</p>
+                <p>Gdańsk</p>
+                <p>Gdynia</p>
+            </div>
+            <div class="column">
+                <p>Katowice</p>
+                <p>Kraków</p>
+                <p>Lublin</p>
+                <p>Łódź</p>
+            </div>
+            <div class="column">
+                <p>Poznań</p>
+                <p>Szczecin</p>
+                <p>Warszawa</p>
+                <p>Wrocław</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Ⓒ AGH University of Science and Technology</p>
+    </footer>
 </body>
 </html>

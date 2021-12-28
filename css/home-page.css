@@ -25,11 +25,90 @@ section.form form {
 
 section.form form input {
     margin: 0 8px;
-    padding: 8px;
-    border-radius: 12px;
-
+    padding: 6px 40px 6px 16px;
+    border-color: transparent;
+    border-radius: 24px;
+    outline: none;
+    font-family: 'Catamaran-Thin';
+    font-size: 18px;
 }
 
 section.form form input::placeholder {
     color: #B7B7B7;
+}
+
+section.form form input:focus {
+    border: 2px solid #F9B34C;
+}
+
+section.form div.input-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+section.form div.input-with-icon i {
+    position: absolute;
+    color: lightgray;
+    margin-right: 24px;
+    font-size: 24px;
+}
+
+section.form form input.submit {
+    padding: 2px 64px;
+    background-color: #F9B34C;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+section.car-types {
+    margin: 32px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section.car-types .type {
+    width: 400px;
+    background-color: lightgray;
+    border-radius: 24px;
+    box-shadow: 4px 3px 8px 1px #969696;
+    margin: 0 24px;
+}
+
+section.car-types .type img {
+    border-radius: 24px;
+    width: 100%;
+}
+
+section.car-types .type .content {
+    padding: 24px;
+    text-align: center;
+}
+
+section.car-types .type .content h2 {
+    margin: 0;
+}
+
+section.locations {
+    background-color: #F9B34C;
+    color: white;
+    padding: 12px 32px;
+    text-align: center;
+}
+
+section.locations h1 {
+    margin: 12px 0;
+}
+
+section.locations .columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section.locations .columns .column {
+    margin: 0 128px;
+    font-size: 18px;
 }
