@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,10 +31,10 @@
     
     <section class="form">
         <h1>Wypożycz samochód już teraz</h1>
-        <form>
+        <form action="list-of-cars.html" method="GET">
             <div class="input-with-icon">
                 <i class="fa fa-map-marker icon"></i>
-                <select name="locaiton" id="location">
+                <select name="location" id="location">
                     <option value="" disabled selected>Miasto</option>
                     <option value="Białystok">Białystok</option>
                     <option value="Bydgoszcz">Bydgoszcz</option>
@@ -52,11 +52,11 @@
             </div>
             <div class="input-with-icon">
                 <i class="fa fa-calendar icon"></i>
-                <input type="text" id="date-from" class="date" placeholder="Data od">
+                <input type="text" name="date-from" id="date-from" class="date" placeholder="Data od">
             </div>
             <div class="input-with-icon">
                 <i class="fa fa-calendar icon"></i>
-                <input type="text" id="date-to" class="date" placeholder="Data do">
+                <input type="text" name="date-to" id="date-to" class="date" placeholder="Data do">
             </div>
             <input type="submit" id="submit" class="submit" value="Szukaj">
         </form>
