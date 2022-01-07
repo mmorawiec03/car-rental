@@ -15,10 +15,10 @@
 </head>
 <body>
     <header>
-        <h1 class="logo">CarRental</h1>
+        <a href="./index.html"><h1 class="logo">CarRental</h1></a>
         
         <nav>
-            <a class="current">Strona główna</a>
+            <a href="./index.html" class="current">Strona główna</a>
             <a>Katalog samochodów</a>
             <a>Kontakt</a>
         </nav>
@@ -34,7 +34,7 @@
         <form action="list-of-cars.html" method="GET">
             <div class="input-with-icon">
                 <i class="fa fa-map-marker icon"></i>
-                <select name="location" id="location">
+                <select name="location" id="location" required>
                     <option value="" disabled selected>Miasto</option>
                     <option value="Białystok">Białystok</option>
                     <option value="Bydgoszcz">Bydgoszcz</option>
@@ -52,11 +52,11 @@
             </div>
             <div class="input-with-icon">
                 <i class="fa fa-calendar icon"></i>
-                <input type="text" name="date-from" id="date-from" class="date" placeholder="Data od">
+                <input type="text" name="date-from" id="date-from" class="date" placeholder="Data od" required autocomplete="off">
             </div>
             <div class="input-with-icon">
                 <i class="fa fa-calendar icon"></i>
-                <input type="text" name="date-to" id="date-to" class="date" placeholder="Data do">
+                <input type="text" name="date-to" id="date-to" class="date" placeholder="Data do" required autocomplete="off">
             </div>
             <input type="submit" id="submit" class="submit" value="Szukaj">
         </form>

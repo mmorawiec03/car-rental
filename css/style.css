@@ -29,13 +29,19 @@ header h1 {
     color: white;
 }
 
+header a {
+    text-decoration: none;
+}
+
 header nav {
     margin-left: auto;
     font-size: 18px;
 }
 
 header nav a {
+    text-decoration: none;
     margin: 0 12px;
+    color: white;
 }
 
 header nav a:hover {
