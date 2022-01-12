@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <title>Formularz kontaktowy</title>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="./css/formularz.css" />
+	<link href="./css/style.css" rel="stylesheet" />
+  </head>
+<body>
+  <header>
+        <a href="./index.html"><h1 class="logo">CarRental</h1></a>
+        
+        <nav>
+            <a href="./index.html" class="current">Strona główna</a>
+            <a>Katalog samochodów</a>
+            <a>Kontakt</a>
+        </nav>
+        <div class="language">
+            <img src="./img/pl.svg" alt="PL">
+            <p>PL</p>
+            <img src="./img/dropdown-arrow.svg" alt="dropdown">
+        </div>
+   </header> 
+    <div class="center">
+	<h2 style="margin: 0;display: inline-block;">Wypełnij formularz</h2>
+    </div>
+    <div class="formularz">
+	    <h3 class="h3"> Dane użytkownika </h3>
+        <input name="Nazwisko" id="nazwisko" placeholder="Nazwisko">
+        <input name="Imie" id="imie" placeholder="Imię">
+		<input name="Miejscowosc" id="miejscowosc" placeholder="Miejscowość">
+		<input name="Ulica" id="ulica" placeholder="Ulica">
+		<input name="Dom" id="numerdomu" placeholder="Numer domu">			
+		<input name="Kod" id="kodpocztowy" placeholder="Kod pocztowy">
+		<input name="Miasto" id="miasto" placeholder="Miasto">
+	    <input name="Email" type="email" id="email" placeholder="Adres e-mail">	
+		<input name="Telefon" id="telefon" placeholder="Numer telefonu">
+        <h3 class="h3"> Rodzaj płatności </h3>
+		<select id="platnosc" name="Platnosc" placeholder="Wybierz formę płatności">
+		     <option>Wybierz formę płatności</option>
+			 <option value="A">Gotówka</option>
+			 <option value="B">Płatność internetowa</option>
+		</select>
+		</br>
+		<image name="Przelewy24" type="image" src="./img/przelewy24.png" class="button-add" />
+		<image name="Blik" type="image" src="./img/blik.jpg" class="button-add" />
+		<image name="PayU" type="image" src="./img/payu.png" class="button-add" />
+		<image name="MasterCard" type="image" src="./img/master_card.png" class="button-add" />
+		<image name="Visa" type="image" src="./img/visa.png" class="button-add" />
+		</br>
+		<div><input name="VAT" type="checkbox">Chcę otrzymać fakturę VAT</div>
+		</br>
+		<div style="text-align: center;">
+		 <a href="udogodnienia.html">
+		  <button type="button"  class="image-button">Dalej</button>
+		 </a>
+		</div>	
+    </div>
+  <footer>
+     <p>Ⓒ AGH University of Science and Technology</p>
+  </footer>
+</body>
+</html>

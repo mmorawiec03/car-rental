@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <title>Udogodnienia</title>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="./css/udogodnienia.css" />
+	<link href="./css/style.css" rel="stylesheet" />
+  </head>
+<body>
+    <header>
+        <a href="./index.html"><h1 class="logo">CarRental</h1></a>   
+        <nav>
+            <a href="./index.html" class="current">Strona główna</a>
+            <a>Katalog samochodów</a>
+            <a>Kontakt</a>
+        </nav>
+        <div class="language">
+            <img src="./img/pl.svg" alt="PL">
+            <p>PL</p>
+            <img src="./img/dropdown-arrow.svg" alt="dropdown">
+        </div>
+    </header>
+    <div class="center">
+      <h2 style="margin: 0;display: inline-block;">Wybierz dodatkowe udogodnienia</h2>
+	  <input type="button" class="button" style="float:right" value="Pomiń" ></input>
+	</div>
+    <div class="udogodnienia">
+	  <div class="box">
+	    <image ntype="image" src="./img/fotelik.png" class="image" />
+	    <label class="text">Fotelik</label>
+	    <input class="checkbox" name="Fotelik_checkbox" type="checkbox">
+      </div>
+	  <div class="box">
+	    <image type="image" src="./img/bike.png" class="image" />
+	    <label class="text">Bagażnik na rowery</label>
+	    <input class="checkbox" name="./img/Rowery_checkbox" type="checkbox">
+      </div>
+	  <div class="box">
+	    <image type="image" src="./img/przyczepka.png" class="image" />
+	    <label class="text">Przyczepka</label>
+	    <input class="checkbox" name="Przyczepka_checkbox" type="checkbox">
+      </div>
+	  <div class="box">
+	    <image type="image" src="./img/narty.png" class="image" />
+	    <label class="text">Bagażnik na narty</label>
+	    <input class="checkbox" name="Narty_checkbox" type="checkbox">
+      </div>
+	  <div class="box">
+	    <image type="image" src="./img/adres.png" class="image" />
+	    <label class="text">Dostarczenie na wskazany adres</label>
+	    <input class="checkbox" name="Dostarczenie_checkbox" type="checkbox">
+      </div>
+	  <div class="box">
+	    <image type="image" src="./img/ubezpieczenie.png" class="image" />
+	    <label class="text">Dodatkowe ubezpieczenie samochodu</label>
+	    <input class="checkbox" name="Dostarczenie_checkbox" type="checkbox">
+      </div>
+    </div>
+	
+	<div class="udogodnienia">
+	  <div class="boxadress">
+	    <image type="image" src="./img/adres.png" class="image" />
+	    <label class="text">Adres dostarczenia samochodu</label>
+      </div>
+	  <div style="background-color:#404040; height:2px; width:100%; margin-bottom:20px;"></div>
+	  <div>
+	    <div class="adress">
+	  		<input name="Miejscowosc" id="miejscowosc" placeholder="Miejscowość">
+			<input name="Ulica" id="ulica" placeholder="Ulica">
+		    <input name="Dom" id="numerdomu" placeholder="Numer domu">
+			<input name="Kod" id="kodpocztowy" placeholder="Kod pocztowy">
+		    <input name="Miasto" id="miasto" placeholder="Miasto">
+        </div>
+	    <image type="image" src="./img/maps1.png" class="image_adress" />
+	  </div>
+	</div>
+	
+    <div class="udogodnienia">
+	  <div class="boxadress">
+	    <image type="image" src="./img/adres.png" class="image" />
+	    <label class="text">Adres zwrotu samochodu</label>
+      </div>
+	  <div style="background-color:#404040; height:2px; width:100%; margin-bottom:20px;"></div>
+	  <div>
+	    <div class="adress">
+	  		<input name="Miejscowosc" id="miejscowosc" placeholder="Miejscowość">
+			<input name="Ulica" id="ulica" placeholder="Ulica">
+		    <input name="Dom" id="numerdomu" placeholder="Numer domu">
+			<input name="Kod" id="kodpocztowy" placeholder="Kod pocztowy">
+		    <input name="Miasto" id="miasto" placeholder="Miasto">
+        </div>
+	    <image type="image" src="./img/maps1.png" class="image_adress" />
+	  </div>
+	</div>
+	
+	<div class="udogodnienia">
+	  <div class="boxadress">
+	    <image type="image" src="./img/ubezpieczenie.png" class="image" />
+	    <label class="text">Dodatkowe ubezpieczenie samochodu</label>
+		<div style="background-color:#404040; height:2px; width:100%; margin-bottom:20px;"></div>
+		<div>
+		 <table>
+          <tr>
+            <td></td>
+            <td>
+			  <label style="font-size: 18px;">Pakiet podstawowy</label>
+		      <input name="Podstawowy_checkbox" type="checkbox">
+	        </td>
+            <td>
+		      <label style="font-size: 18px; ">Pakiet premium</label>
+		      <input name="Premium_checkbox" type="checkbox">
+	        </td>
+          </tr>
+          <tr>
+            <td>Kradzież samochodu</td>
+            <td></td>
+            <td>+</td>
+          </tr>
+          <tr>
+            <td>Zgubienie kluczyków</td>
+            <td></td>
+            <td>+</td>
+          </tr>
+          <tr>
+            <td>Kaucja</td>
+            <td>+</td>
+            <td>+</td>
+          </tr>
+         </table> 
+		</div>
+      </div>
+	</div>
+	<div style=" text-align: center; margin-top:30px; margin-bottom:30px;">
+	  <input type="button" class="button" value="Dalej" ></input>
+	</div>
+    <footer>
+      <p>Ⓒ AGH University of Science and Technology</p>
+    </footer>
+</body>
+</html>
