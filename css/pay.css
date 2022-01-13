@@ -1,0 +1,54 @@
+section.pay_header {
+	text-align: center;
+}
+
+section.pay_header h3 {
+	font-size: 250%;
+}
+
+button.select {
+    margin: 12px;
+	margin-left: 150px;
+	
+    border-color: transparent;
+    border-radius: 24px;
+    outline: none;
+    font-family: 'Catamaran-Thin';
+    font-size: 18px;
+    padding: 0 32px;
+    background-color: #F9B34C;
+    color: white;
+    letter-spacing: 1px;
+}
+
+button.select:hover {
+    filter: brightness(90%);
+}
+
+section.summary_confirm {
+	text-align: center;
+	display: flex;
+    flex-direction: row;
+    margin: 30% 39%;
+}
+
+button.confirm {
+    margin: 12px;
+	margin-left: 150px;
+	
+    border-color: transparent;
+    border-radius: 24px;
+    outline: none;
+    font-family: 'Catamaran-Thin';
+    font-size: 18px;
+    padding: 0 32px;
+    background-color: #391D5F;
+    color: white;
+    letter-spacing: 1px;
+}
+
+button.confirm:hover {
+    filter: brightness(80%);
+}
+
+
