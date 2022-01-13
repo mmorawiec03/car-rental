@@ -1,0 +1,147 @@
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Car rental</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+	<link href="./css/summary.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/summary.js"></script>
+</head>
+<body>
+	<header>
+		<a href="./index.html"><h1 class="logo">CarRental</h1></a>
+
+		<nav>
+			<a href="./index.html">Strona główna</a>
+			<a class="current">Katalog samochodów</a>
+			<a>Kontakt</a>
+		</nav>
+		<div class="language">
+			<img src="./img/pl.svg" alt="PL">
+			<p>PL</p>
+			<img src="./img/dropdown-arrow.svg" alt="dropdown">
+		</div>
+	</header>
+
+	<section class="summary_header">
+		<h3>Podsumowanie</h3>
+	</section>
+
+
+	<section class="summary_details">
+		<div class="split left">
+			<div class="centered">
+				<table class="details_table">
+					<tr>
+						<td>Data odbioru</td>
+						<td>24.01.2022</td>
+					</tr>
+					<tr>
+						<td>Miejsce odbioru</td>
+						<td>Kraków</td>
+					</tr>
+					<tr>
+						<td>Data zwrotu</td>
+						<td>31.01.2022</td>
+					</tr>
+					<tr>
+						<td>Miejsce zwrotu</td>
+						<td>Kraków</td>
+					</tr>
+					<tr>
+						<td>Rodzaj płatności</td>
+						<td>Karta kredytowa</td>
+					</tr>
+					<tr>
+						<td>Koszt wynajmu</td>
+						<td>1190 zł</td>
+					</tr>
+					<tr>
+						<td>Kaucja</td>
+						<td>2000 zł</td>
+					</tr>
+					<tr>
+						<td>Koszt ubezpieczenia</td>
+						<td>120 zł</td>
+					</tr>
+					<tr>
+						<td>Koszt dodatkowych udogodnień</td>
+						<td>50 zł</td>
+					</tr>
+					<tr>
+						<td>Koszt całkowity</td>
+						<td>3360 zł</td>
+					</tr>
+				</table>
+
+				<button class="select">
+					<a href="./index.html" style="text-decoration: none; color: white"> Modyfikuj dane </a>	 <!-- TBD -->
+				</button>
+			</div>
+		</div>
+
+		<div class="split right">
+			<div class="centered">
+				<div class="selected_car_header">
+					<h2>Wybrany samochód</h2>
+				</div>
+				<hr>
+				<article class="selected_car">
+					<div class="car">
+						<div class="info">
+							<h3>Nissan Micra</h3>
+							<div class="info-details">
+								<div class="info-basic">
+									<div class="icon-with-text">
+										<img src="./img/places.jpg" alt="" class="icon">
+										<p>4 miejsca</p>
+									</div>
+									<div class="icon-with-text">
+										<img src="./img/gear.jpg" alt="" class="icon">
+										<p>Manualna</p>
+									</div>
+									<div class="icon-with-text">
+										<img src="./img/fuel.jpg" alt="" class="icon">
+										<p>Benzyna</p>
+									</div>
+								</div>
+								<div class="info-luggage">
+									<div class="icon-with-text">
+										<img src="./img/android-auto.png" alt="" class="icon">
+										<p>android auto</p>
+									</div>
+									<div class="icon-with-text">
+										<img src="./img/rear-view-camera.jpg" alt="" class="icon">
+										<p>kamera cofania</p>
+									</div>
+									<div class="icon-with-text">
+										<img src="./img/230V-socket.png" alt="" class="icon">
+										<p>Gniazdo AC</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="img-car">
+							<img src="./img/nissan.png" alt="Car">
+						</div>
+					</div>
+
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section class="summary_confirm">
+		<button class="confirm">
+			<a href="./pay.html" style="text-decoration: none; color: white"> Potwierdzam rezerwację </a>	 <!-- TBD -->
+		</button>
+	</section>
+
+    <footer>
+    	<p>Ⓒ AGH University of Science and Technology</p>
+    </footer>
+</body>
+</html>
