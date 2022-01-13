@@ -6,42 +6,66 @@ section.pay_header h3 {
 	font-size: 250%;
 }
 
-button.select {
-    margin: 12px;
-	margin-left: 150px;
-	
-    border-color: transparent;
+section.details div.details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    margin: auto;
+    padding: 48px 96px;
     border-radius: 24px;
-    outline: none;
-    font-family: 'Catamaran-Thin';
-    font-size: 18px;
-    padding: 0 32px;
-    background-color: #F9B34C;
-    color: white;
-    letter-spacing: 1px;
+    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.5);
 }
 
-button.select:hover {
-    filter: brightness(90%);
+div.icon-with-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+div.icon-with-text h2 {
+    margin: 0;
+    margin-left: 12px;
+}
+
+div.icon-with-text .icon {
+    color: #F9B34C;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+}
+
+hr {
+    width: 100%;
+}
+
+section.details div.details-container div.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section.details div.details-container p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0;
 }
 
 section.summary_confirm {
-	text-align: center;
-	display: flex;
-    flex-direction: row;
-    margin: 30% 39%;
+    text-align: center;
+    margin: 64px;
+    bottom: 0;
 }
 
 button.confirm {
-    margin: 12px;
-	margin-left: 150px;
-	
     border-color: transparent;
     border-radius: 24px;
     outline: none;
     font-family: 'Catamaran-Thin';
     font-size: 18px;
-    padding: 0 32px;
+    padding: 8px 64px;
     background-color: #391D5F;
     color: white;
     letter-spacing: 1px;
@@ -50,5 +74,3 @@ button.confirm {
 button.confirm:hover {
     filter: brightness(80%);
 }
-
-
