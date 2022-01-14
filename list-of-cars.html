@@ -1,322 +1,416 @@
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car rental</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link href="./css/style.css" rel="stylesheet" type="text/css">
-    <link href="./css/list-of-cars.css" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/list-of-cars.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Car rental</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+	<link href="./css/list-of-cars.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/list-of-cars.js"></script>
 </head>
 <body>
-    <header>
-        <a href="./index.html"><h1 class="logo">CarRental</h1></a>
-        
-        <nav>
-            <a href="./index.html">Strona główna</a>
-            <a class="current">Katalog samochodów</a>
-            <a>Kontakt</a>
-        </nav>
-        <div class="language">
-            <img src="./img/pl.svg" alt="PL">
-            <p>PL</p>
-            <img src="./img/dropdown-arrow.svg" alt="dropdown">
-        </div>
-    </header>
+	<header>
+		<a href="./index.html"><h1 class="logo">CarRental</h1></a>
 
-    <section class="query-params">
-        <div class="pickup">
-            <h3>Odbiór</h3>
-            <div class="date-and-location">
-                <div class="icon-with-text">
-                    <i class="fa fa-calendar icon"></i>
-                    <p id="date-from"></p>
-                </div>
-                <div class="icon-with-text">
-                    <i class="fa fa-map-marker icon icon-location"></i>
-                    <p id="location-from"></p>
-                </div>
-            </div>
-        </div>
-        <div class="return">
-            <h3>Zwrot</h3>
-            <div class="date-and-location">
-                <div class="icon-with-text">
-                    <i class="fa fa-calendar icon"></i>
-                    <p id="date-to"></p>
-                </div>
-                <div class="icon-with-text">
-                    <i class="fa fa-map-marker icon icon-location"></i>
-                    <p id="location-to"></p>
-                </div>
-            </div>
-        </div>
-    </section>
+		<nav>
+			<a href="./index.html">Strona główna</a>
+			<a class="current">Katalog samochodów</a>
+			<a>Kontakt</a>
+		</nav>
+		<div class="language">
+			<img src="./img/pl.svg" alt="PL">
+			<p>PL</p>
+			<img src="./img/dropdown-arrow.svg" alt="dropdown">
+		</div>
+	</header>
+
+	<section class="query-params">
+		<div class="pickup">
+			<h3>Odbiór</h3>
+			<div class="date-and-location">
+				<div class="icon-with-text">
+					<i class="fa fa-calendar icon"></i>
+					<p id="date-from"></p>
+				</div>
+				<div class="icon-with-text">
+					<i class="fa fa-map-marker icon icon-location"></i>
+					<p id="location-from"></p>
+				</div>
+			</div>
+		</div>
+		<div class="return">
+			<h3>Zwrot</h3>
+			<div class="date-and-location">
+				<div class="icon-with-text">
+					<i class="fa fa-calendar icon"></i>
+					<p id="date-to"></p>
+				</div>
+				<div class="icon-with-text">
+					<i class="fa fa-map-marker icon icon-location"></i>
+					<p id="location-to"></p>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
-    <section class="list-of-cars">
-        <aside class="filters">
-            <h3>Filtry</h3>
+	<section class="list-of-cars">
+		<aside class="filters">
+			<h3>Sortowanie</h3>
+			<div class="filter">
+				<select name="sort" id="sort">
+					<option value="cena: od najniższej">cena: od najniższej</option>
+					<option value="cena: od najwyższej">cena: od najwyższej</option>
+					<option value="popularność: największa">popularność: największa</option>
+					<option value="najnowsze">najnowsze</option>
+				</select>
+			</div>
 
-            <div class="filter">
-                <label for="category">Kategoria</label>
-                <select name="category" id="category">
-                    <option value="Any">Dowolna</option>
-                    <option value="Osobowe">Osobowe</option>
-                    <option value="Sportowe">Sportowe</option>
-                    <option value="Wieloosobowe">Wieloosobowe</option>
-                    <option value="Terenowe">Terenowe</option>
-                    <option value="Dostawcze">Dostawcze</option>
-                </select>
-            </div>
+			<h3>Filtry</h3>
+			<div class="filter">
+				<label for="category">Kategoria</label>
+				<select name="category" id="category">
+					<option value="Any">Dowolna</option>
+					<option value="Osobowe">Osobowe</option>
+					<option value="Sportowe">Sportowe</option>
+					<option value="Wieloosobowe">Wieloosobowe</option>
+					<option value="Terenowe">Terenowe</option>
+					<option value="Dostawcze">Dostawcze</option>
+				</select>
+			</div>
 
-            <div class="filter">
-                <label>Cena za dzień [zł]</label>
-                <div class="range">
-                    <input type="number" name="price-from" id="price-from" placeholder="Od">
-                    <input type="number" name="price-to" id="price-to" placeholder="Do">
-                </div>
-            </div>
+			<div class="filter">
+				<label>Cena za dzień [zł]</label>
+				<div class="range">
+					<input type="number" name="price-from" id="price-from" placeholder="Od">
+					<input type="number" name="price-to" id="price-to" placeholder="Do">
+				</div>
+			</div>
 
-            <div class="filter">
-                <label for="places">Ilość miejsc</label>
-                <select name="places" id="places">
-                    <option value="Any">Dowolna</option>
-                    <option value="2">2</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="7">7</option>
-                    <option value="9">9</option>
-                </select>
-            </div>
+			<div class="filter">
+				<label for="places">Liczba miejsc</label>
+				<select name="places" id="places">
+					<option value="Any">Dowolna</option>
+					<option value="2">2</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="7">7</option>
+					<option value="9">9</option>
+				</select>
+			</div>
 
-            <div class="filter">
-                <label for="brand">Marka</label>
-                <select name="brand" id="brand">
-                    <option value="Any">Dowolna</option>
-                    <option value="Audi">Audi</option>
-                    <option value="BMW">BMW</option>
-                    <option value="Ford">Ford</option>
-                    <option value="Honda">Honda</option>
-                    <option value="Jeep">Jeep</option>
-                    <option value="Kia">Kia</option>
-                    <option value="Mazda">Mazda</option>
-                    <option value="Mercedes">Mercedes</option>
-                    <option value="Mini">Mini</option>
-                    <option value="Nissan">Nissan</option>
-                    <option value="Porshe">Porshe</option>
-                    <option value="Subaru">Subaru</option>
-                    <option value="Toyota">Toyota</option>
-                    <option value="Volkswagen">Volkswagen</option>
-                    <option value="Volvo">Volvo</option>
-                    <option value="Other">Inna</option>
-                </select>
-            </div>
+			<div class="filter">
+				<label for="brand">Marka</label>
+				<select name="brand" id="brand">
+					<option value="Any">Dowolna</option>
+					<option value="Audi">Audi</option>
+					<option value="BMW">BMW</option>
+					<option value="Ford">Ford</option>
+					<option value="Honda">Honda</option>
+					<option value="Jeep">Jeep</option>
+					<option value="Kia">Kia</option>
+					<option value="Mazda">Mazda</option>
+					<option value="Mercedes">Mercedes</option>
+					<option value="Mini">Mini</option>
+					<option value="Nissan">Nissan</option>
+					<option value="Porshe">Porshe</option>
+					<option value="Subaru">Subaru</option>
+					<option value="Toyota">Toyota</option>
+					<option value="Volkswagen">Volkswagen</option>
+					<option value="Volvo">Volvo</option>
+					<option value="Other">Inna</option>
+				</select>
+			</div>
 
-            <div class="filter">
-                <label>Moc silnika [km]</label>
-                <div class="range">
-                    <input type="number" name="engine-power-from" id="engine-power-from" placeholder="Od">
-                    <input type="number" name="engine-power-to" id="engine-power-to" placeholder="Do">
-                </div>
-            </div>
+			<div class="filter">
+				<label>Moc silnika [km]</label>
+				<div class="range">
+					<input type="number" name="engine-power-from" id="engine-power-from" placeholder="Od">
+					<input type="number" name="engine-power-to" id="engine-power-to" placeholder="Do">
+				</div>
+			</div>
 
-            <div class="filter">
-                <label for="gearbox">Skrzynia biegów</label>
-                <select name="gearbox" id="gearbox">
-                    <option value="Any">Dowolna</option>
-                    <option value="Manual">Manualna</option>
-                    <option value="Automatic">Automatyczna</option>
-                </select>
-            </div>
-        </aside>
-        
-        <article class="list">
-            <ul>
-                <li>
-                    <div class="car">
-                        <div class="img-car">
-                            <img src="./img/nissan.png" alt="Car">
-                        </div>
-                        <div class="info">
-                            <h3>Nissan</h3>
-                            <div class="info-details">
-                                <div class="info-basic">
-                                    <div class="icon-with-text">
-                                        <img src="./img/places.jpg" alt="" class="icon">
-                                        <p>4 miejsca</p>
-                                    </div>
-                                    <div class="icon-with-text">
-                                        <img src="./img/gear.jpg" alt="" class="icon">
-                                        <p>Manualna</p>
-                                    </div>
-                                    <div class="icon-with-text">
-                                        <img src="./img/fuel.jpg" alt="" class="icon">
-                                        <p>Benzyna</p>
-                                    </div>
-                                </div>
-                                <div class="info-luggage">
-                                    <div class="icon-with-text">
-                                        <img src="./img/luggage-big.jpg" alt="" class="icon">
-                                        <p>2 duże bagaże</p>
-                                    </div>
-                                    <p>lub</p>
-                                    <div class="icon-with-text">
-                                        <img src="./img/luggage-small.jpg" alt="" class="icon">
-                                        <p>3 małe bagaże</p>
-                                    </div>
-                                </div>
-                                </div>
-                        </div>
-                        <div class="price">
-                            <h2>170 zł</h2>
-                            <p>za dobę</p>
-                            <a href="udogodnienia.html">
-                                <button class="select">Wybierz</button>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="car">
-                        <div class="img-car">
-                            <img src="./img/nissan.png" alt="Car">
-                        </div>
-                        <div class="info">
-                            <h3>Nissan</h3>
-                            <div class="info-details">
-                                <div class="info-basic">
-                                    <div class="icon-with-text">
-                                        <img src="./img/places.jpg" alt="" class="icon">
-                                        <p>4 miejsca</p>
-                                    </div>
-                                    <div class="icon-with-text">
-                                        <img src="./img/gear.jpg" alt="" class="icon">
-                                        <p>Manualna</p>
-                                    </div>
-                                    <div class="icon-with-text">
-                                        <img src="./img/fuel.jpg" alt="" class="icon">
-                                        <p>Benzyna</p>
-                                    </div>
-                                </div>
-                                <div class="info-luggage">
-                                    <div class="icon-with-text">
-                                        <img src="./img/luggage-big.jpg" alt="" class="icon">
-                                        <p>2 duże bagaże</p>
-                                    </div>
-                                    <p>lub</p>
-                                    <div class="icon-with-text">
-                                        <img src="./img/luggage-small.jpg" alt="" class="icon">
-                                        <p>3 małe bagaże</p>
-                                    </div>
-                                </div>
-                                </div>
-                        </div>
-                        <div class="price">
-                            <h2>170 zł</h2>
-                            <p>za dobę</p>
-                            <a href="udogodnienia.html">
-                                <button class="select">Wybierz</button>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="car">
-                        <div class="img-car">
-                            <img src="./img/nissan.png" alt="Car">
-                        </div>
-                        <div class="info">
-                            <h3>Nissan</h3>
-                            <div class="info-details">
-                                <div class="info-basic">
-                                    <div class="icon-with-text">
-                                        <img src="./img/places.jpg" alt="" class="icon">
-                                        <p>4 miejsca</p>
-                                    </div>
-                                    <div class="icon-with-text">
-                                        <img src="./img/gear.jpg" alt="" class="icon">
-                                        <p>Manualna</p>
-                                    </div>
-                                    <div class="icon-with-text">
-                                        <img src="./img/fuel.jpg" alt="" class="icon">
-                                        <p>Benzyna</p>
-                                    </div>
-                                </div>
-                                <div class="info-luggage">
-                                    <div class="icon-with-text">
-                                        <img src="./img/luggage-big.jpg" alt="" class="icon">
-                                        <p>2 duże bagaże</p>
-                                    </div>
-                                    <p>lub</p>
-                                    <div class="icon-with-text">
-                                        <img src="./img/luggage-small.jpg" alt="" class="icon">
-                                        <p>3 małe bagaże</p>
-                                    </div>
-                                </div>
-                                </div>
-                        </div>
-                        <div class="price">
-                            <h2>170 zł</h2>
-                            <p>za dobę</p>
-                            <a href="udogodnienia.html">
-                                <button class="select">Wybierz</button>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="car">
-                        <div class="img-car">
-                            <img src="./img/nissan.png" alt="Car">
-                        </div>
-                        <div class="info">
-                            <h3>Nissan</h3>
-                            <div class="info-details">
-                                <div class="info-basic">
-                                    <div class="icon-with-text">
-                                        <img src="./img/places.jpg" alt="" class="icon">
-                                        <p>4 miejsca</p>
-                                    </div>
-                                    <div class="icon-with-text">
-                                        <img src="./img/gear.jpg" alt="" class="icon">
-                                        <p>Manualna</p>
-                                    </div>
-                                    <div class="icon-with-text">
-                                        <img src="./img/fuel.jpg" alt="" class="icon">
-                                        <p>Benzyna</p>
-                                    </div>
-                                </div>
-                                <div class="info-luggage">
-                                    <div class="icon-with-text">
-                                        <img src="./img/luggage-big.jpg" alt="" class="icon">
-                                        <p>2 duże bagaże</p>
-                                    </div>
-                                    <p>lub</p>
-                                    <div class="icon-with-text">
-                                        <img src="./img/luggage-small.jpg" alt="" class="icon">
-                                        <p>3 małe bagaże</p>
-                                    </div>
-                                </div>
-                                </div>
-                        </div>
-                        <div class="price">
-                            <h2>170 zł</h2>
-                            <p>za dobę</p>
-                            <a href="udogodnienia.html">
-                                <button class="select">Wybierz</button>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </article>
-    </section>
+			<div class="filter">
+				<label for="gearbox">Skrzynia biegów</label>
+				<select name="gearbox" id="gearbox">
+					<option value="Any">Dowolna</option>
+					<option value="Manual">Manualna</option>
+					<option value="Automatic">Automatyczna</option>
+				</select>
+			</div>
 
-    <footer>
-        <p>Ⓒ AGH University of Science and Technology</p>
-    </footer>
+			<div class="filter">
+				<label for="gearbox">Paliwo</label>
+				<select name="gearbox" id="gearbox">
+					<option value="Any">Dowolna</option>
+					<option value="Benzyna">Benzyna</option>
+					<option value="Disel">Disel</option>
+					<option value="LPG">LPG</option>
+					<option value="Hybryda">Hybryda</option>
+					<option value="Elektryczny">Elektryczny</option>
+				</select>
+			</div>
+
+			<div class="extend">
+				<div class="wrap-collabsible">
+					<input id="collapsible3" class="toggle" type="checkbox"> <label for="collapsible3" class="lbl-toggle" tabindex="0">Rozwiń</label>
+					<div class="collapsible-content">
+						<div class="content-inner">
+							<p>
+								<div class="box">
+									<image ntype="image" src="./img/android-auto.png" class="image" />
+									<label class="text">android auto</label>
+									<input class="checkbox" name="android-auto_checkbox" type="checkbox">
+								</div>
+							</p>
+							<p>
+								<div class="box">
+									<image ntype="image" src="./img/rear-view-camera.jpg" class="image" />
+									<label class="text">kamera cofania</label>
+									<input class="checkbox" name="kamera-cofania_checkbox" type="checkbox">
+								</div>
+							</p>
+							<p>
+								<div class="box">
+									<image ntype="image" src="./img/230V-socket.png" class="image" />
+									<label class="text">gniazdo AC</label>
+									<input class="checkbox" name="gniazdo-AC" type="checkbox">
+								</div>
+							</p>
+							<p>
+								<div class="box">
+									<image ntype="image" src="./img/road-slight-curve.png" class="image" />
+									<label class="text">asystent pasa ruchu</label>
+									<input class="checkbox" name="asystent-pasa-ruchu_checkbox" type="checkbox">
+								</div>
+							</p>
+							<p>
+								<div class="box">
+									<image ntype="image" src="./img/speaker-filled-audio-tool.png" class="image" />
+									<label class="text">audio premium</label>
+									<input class="checkbox" name="audio-premium_checkbox" type="checkbox">
+								</div>
+							</p>
+							<p>
+								<div class="box">
+									<image ntype="image" src="./img/4x4.png" class="image" />
+									<label class="text">napęd 4x4</label>
+									<input class="checkbox" name="naped-4x4_checkbox" type="checkbox">
+								</div>
+							</p>
+							<p>
+								<div class="box">
+									<image ntype="image" src="./img/navigation.png" class="image" />
+									<label class="text">yanosik GTR</label>
+									<input class="checkbox" name="yanosik-GTR_checkbox" type="checkbox">
+								</div>
+							</p>
+							<p>
+								<div class="box">
+									<image ntype="image" src="./img/speedometer.png" class="image" />
+									<label class="text">aktywny tempomat</label>
+									<input class="checkbox" name="aktywny-tempomat" type="checkbox">
+								</div>
+							</p>
+							<p>
+								<div class="box">
+									<image ntype="image" src="./img/roof.png" class="image" />
+									<label class="text">panoramiczny dach</label>
+									<input class="checkbox" name="panoramiczny-dach_checkbox" type="checkbox">
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</aside>
+
+		<article class="list">
+			<ul>
+				<li>
+					<div class="car">
+						<div class="img-car">
+							<img src="./img/nissan.png" alt="Car">
+						</div>
+						<div class="info">
+							<h3>Nissan</h3>
+							<div class="info-details">
+								<div class="info-basic">
+									<div class="icon-with-text">
+										<img src="./img/places.jpg" alt="" class="icon">
+										<p>4 miejsca</p>
+									</div>
+									<div class="icon-with-text">
+										<img src="./img/gear.jpg" alt="" class="icon">
+										<p>Manualna</p>
+									</div>
+									<div class="icon-with-text">
+										<img src="./img/fuel.jpg" alt="" class="icon">
+										<p>Benzyna</p>
+									</div>
+								</div>
+								<div class="info-luggage">
+									<div class="icon-with-text">
+										<img src="./img/luggage-big.jpg" alt="" class="icon">
+										<p>2 duże bagaże</p>
+									</div>
+									<p>lub</p>
+									<div class="icon-with-text">
+										<img src="./img/luggage-small.jpg" alt="" class="icon">
+										<p>3 małe bagaże</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="price">
+							<h2>170 zł</h2>
+							<p>za dobę</p>
+							<a href="udogodnienia.html">
+								<button class="select">Wybierz</button>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="car">
+						<div class="img-car">
+							<img src="./img/nissan.png" alt="Car">
+						</div>
+						<div class="info">
+							<h3>Nissan</h3>
+							<div class="info-details">
+								<div class="info-basic">
+									<div class="icon-with-text">
+										<img src="./img/places.jpg" alt="" class="icon">
+										<p>4 miejsca</p>
+									</div>
+									<div class="icon-with-text">
+										<img src="./img/gear.jpg" alt="" class="icon">
+										<p>Manualna</p>
+									</div>
+									<div class="icon-with-text">
+										<img src="./img/fuel.jpg" alt="" class="icon">
+										<p>Benzyna</p>
+									</div>
+								</div>
+								<div class="info-luggage">
+									<div class="icon-with-text">
+										<img src="./img/luggage-big.jpg" alt="" class="icon">
+										<p>2 duże bagaże</p>
+									</div>
+									<p>lub</p>
+									<div class="icon-with-text">
+										<img src="./img/luggage-small.jpg" alt="" class="icon">
+										<p>3 małe bagaże</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="price">
+							<h2>170 zł</h2>
+							<p>za dobę</p>
+							<a href="udogodnienia.html">
+								<button class="select">Wybierz</button>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="car">
+						<div class="img-car">
+							<img src="./img/nissan.png" alt="Car">
+						</div>
+						<div class="info">
+							<h3>Nissan</h3>
+							<div class="info-details">
+								<div class="info-basic">
+									<div class="icon-with-text">
+										<img src="./img/places.jpg" alt="" class="icon">
+										<p>4 miejsca</p>
+									</div>
+									<div class="icon-with-text">
+										<img src="./img/gear.jpg" alt="" class="icon">
+										<p>Manualna</p>
+									</div>
+									<div class="icon-with-text">
+										<img src="./img/fuel.jpg" alt="" class="icon">
+										<p>Benzyna</p>
+									</div>
+								</div>
+								<div class="info-luggage">
+									<div class="icon-with-text">
+										<img src="./img/luggage-big.jpg" alt="" class="icon">
+										<p>2 duże bagaże</p>
+									</div>
+									<p>lub</p>
+									<div class="icon-with-text">
+										<img src="./img/luggage-small.jpg" alt="" class="icon">
+										<p>3 małe bagaże</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="price">
+							<h2>170 zł</h2>
+							<p>za dobę</p>
+							<a href="udogodnienia.html">
+								<button class="select">Wybierz</button>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="car">
+						<div class="img-car">
+							<img src="./img/nissan.png" alt="Car">
+						</div>
+						<div class="info">
+							<h3>Nissan</h3>
+							<div class="info-details">
+								<div class="info-basic">
+									<div class="icon-with-text">
+										<img src="./img/places.jpg" alt="" class="icon">
+										<p>4 miejsca</p>
+									</div>
+									<div class="icon-with-text">
+										<img src="./img/gear.jpg" alt="" class="icon">
+										<p>Manualna</p>
+									</div>
+									<div class="icon-with-text">
+										<img src="./img/fuel.jpg" alt="" class="icon">
+										<p>Benzyna</p>
+									</div>
+								</div>
+								<div class="info-luggage">
+									<div class="icon-with-text">
+										<img src="./img/luggage-big.jpg" alt="" class="icon">
+										<p>2 duże bagaże</p>
+									</div>
+									<p>lub</p>
+									<div class="icon-with-text">
+										<img src="./img/luggage-small.jpg" alt="" class="icon">
+										<p>3 małe bagaże</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="price">
+							<h2>170 zł</h2>
+							<p>za dobę</p>
+							<a href="udogodnienia.html">
+								<button class="select">Wybierz</button>
+							</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</article>
+	</section>
+
+	<footer>
+		<p>Ⓒ AGH University of Science and Technology</p>
+	</footer>
 </body>
 </html>

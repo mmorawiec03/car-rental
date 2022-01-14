@@ -53,7 +53,7 @@ section.list-of-cars {
 }
 
 section.list-of-cars aside.filters {
-    width: 10%;
+    width: 15%;
     padding: 24px;
     background-color: #CCCCCC;
     border-radius: 24px;
@@ -104,110 +104,8 @@ section.list-of-cars aside.filters input {
     font-size: 16px;
 }
 
-section.list-of-cars article.list {
-    width: 100%;
-    margin-left: 32px;
-}
-
-article.list ul,
-article.list li {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-
-article.list div.car {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-radius: 24px;
-    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.5);
-    padding-left: 12px;
-    padding-right: 48px;
-    margin-bottom: 24px;
-}
-
-article.list div.car div.img-car {
-    padding: 24px;
-}
-
-article.list div.car div.img-car img {
-    height: 100%;
-    width: auto;
-}
-
-article.list div.car div.info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 24px 0;
-}
-
-article.list div.car div.info h3 {
-    margin: 0;
-    margin-bottom: 12px;
-}
-
-article.list div.car div.info-details {
-    display: flex;
-    flex-direction: row;
-}
-
-article.list div.car div.info-details div.info-basic {
-    margin-right: 64px;
-}
-
-article.list div.car div.info-details div.info-luggage {
-    margin-left: 64px;
-    text-align: center;
-}
-
-article.list div.car div.icon-with-text {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-article.list div.car p {
-    margin: 0;
-}
-
-article.list div.car div.icon-with-text p {
-    margin: 0;
-    margin-left: 12px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-article.list div.car div.icon-with-text .icon {
-    color: #F9B34C;
-    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
-    font-size: 18px;
-}
-
-article.list div.car div.price {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
-article.list div.car div.price h2 {
-    margin: 0;
-    padding: 0;
-}
-
-article.list div.car div.price p {
-    padding: 0;
-    margin-bottom: 12px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-article.list div.car div.price button.select {
-    margin: 0 8px;
+/*section.list-of-cars aside.filters div.extend button.select {
+    margin: 12px 8px;
     border-color: transparent;
     border-radius: 24px;
     outline: none;
@@ -219,6 +117,228 @@ article.list div.car div.price button.select {
     letter-spacing: 1px;
 }
 
-article.list div.car div.price button.select:hover {
+section.list-of-cars aside.filters div.extend button.select:hover {
     filter: brightness(90%);
-}
+    }*/
+    /*--------------------------------------------------------------------*/
+    section.list-of-cars aside.filters div.extend input[type='checkbox'] {
+        display: none;
+    }
+
+    section.list-of-cars aside.filters div.extend .wrap-collabsible {
+        margin: 1.2rem 0;
+    }
+
+    section.list-of-cars aside.filters div.extend .lbl-toggle {
+        display: block;
+        margin-top: 30px;
+        border-color: transparent;
+        border-radius: 24px;
+        outline: none;
+        font-family: 'Catamaran-Thin';
+        font-size: 18px;
+        padding: 0 32px;
+        background-color: #F9B34C;
+        color: white;
+        letter-spacing: 1px;
+        transition: all 0.25s ease-out;
+    }
+
+    section.list-of-cars aside.filters div.extend .lbl-toggle:hover {
+        color: #FFF;
+    }
+
+    section.list-of-cars aside.filters div.extend .lbl-toggle::before {
+        content: ' ';
+        display: inline-block;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid currentColor;
+        vertical-align: middle;
+        margin-right: .7rem;
+        transform: translateY(-2px);
+        transition: transform .2s ease-out;
+    }
+
+    section.list-of-cars aside.filters div.extend .toggle:checked+.lbl-toggle::before {
+        transform: rotate(90deg) translateX(-3px);
+    }
+
+    section.list-of-cars aside.filters div.extend .collapsible-content {
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height .25s ease-in-out;
+    }
+
+    section.list-of-cars aside.filters div.extend .toggle:checked+.lbl-toggle+.collapsible-content {
+        max-height: 560px;
+    }
+
+/*section.list-of-cars aside.filters div.extend .toggle:checked+.lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    }*/
+
+/*    section.list-of-cars aside.filters div.extend .collapsible-content .content-inner {
+        padding: .5rem 1rem;
+    }*/
+
+    section.list-of-cars aside.filters div.extend .collapsible-content p {
+        margin-bottom: 0;
+    }
+
+    section.list-of-cars aside.filters div.extend div.box {
+        background-color:white;
+        border:2px solid #999999;
+        border-radius:10px;
+        padding:5px;     
+/*        margin-top:10px;*/
+      }
+
+    section.list-of-cars aside.filters div.extend div.box .image{
+        background-color:transparent;
+        height: 30px;   
+        vertical-align: middle;
+    }
+
+    section.list-of-cars aside.filters div.extend div.box .text{
+        font-size: 16px;      
+        margin-left: 5px;   
+        vertical-align: middle;
+        text-align: center;
+        color: #000000;
+        white-space: nowrap;
+    }
+
+    section.list-of-cars aside.filters div.extend div.box .checkbox {
+        float:right;
+        vertical-align: middle;
+        transform: scale(1.2);
+        text-align:center;
+        height: 30px; 
+        display: inline-block;
+      }
+
+/*      section.list-of-cars aside.filters div.extend div.box input[type='checkbox'] {
+        display: inline-block;
+      }*/
+    /*--------------------------------------------------------------------*/
+
+    section.list-of-cars article.list {
+        width: 100%;
+        margin-left: 32px;
+    }
+
+    article.list ul,
+    article.list li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+
+    article.list div.car {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 24px;
+        box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.5);
+        padding-left: 12px;
+        padding-right: 48px;
+        margin-bottom: 24px;
+    }
+
+    article.list div.car div.img-car {
+        padding: 24px;
+    }
+
+    article.list div.car div.img-car img {
+        height: 100%;
+        width: auto;
+    }
+
+    article.list div.car div.info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 24px 0;
+    }
+
+    article.list div.car div.info h3 {
+        margin: 0;
+        margin-bottom: 12px;
+    }
+
+    article.list div.car div.info-details {
+        display: flex;
+        flex-direction: row;
+    }
+
+    article.list div.car div.info-details div.info-basic {
+        margin-right: 64px;
+    }
+
+    article.list div.car div.info-details div.info-luggage {
+        margin-left: 64px;
+        text-align: center;
+    }
+
+    article.list div.car div.icon-with-text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    article.list div.car p {
+        margin: 0;
+    }
+
+    article.list div.car div.icon-with-text p {
+        margin: 0;
+        margin-left: 12px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    article.list div.car div.icon-with-text .icon {
+        color: #F9B34C;
+        text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+        font-size: 18px;
+    }
+
+    article.list div.car div.price {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    article.list div.car div.price h2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    article.list div.car div.price p {
+        padding: 0;
+        margin-bottom: 12px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    article.list div.car div.price button.select {
+        margin: 0 8px;
+        border-color: transparent;
+        border-radius: 24px;
+        outline: none;
+        font-family: 'Catamaran-Thin';
+        font-size: 18px;
+        padding: 0 32px;
+        background-color: #F9B34C;
+        color: white;
+        letter-spacing: 1px;
+    }
+
+    article.list div.car div.price button.select:hover {
+        filter: brightness(90%);
+    }
