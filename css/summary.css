@@ -13,7 +13,6 @@ section.summary_details {
     margin: 24px 128px;
 }
 
-/* Split the screen in half */
 section.summary_details div.split {
   height: 80%;
   width: 50%;
@@ -24,17 +23,14 @@ section.summary_details div.split {
   padding-top: 20px;
 }
 
-/* Control the left side */
 section.summary_details div.left {
   left: 0;
 }
 
-/* Control the right side */
 section.summary_details div.right {
   right: 0;
 }
 
-/* If you want the content centered horizontally and vertically */
 section.summary_details div.centered {
   position: absolute;
   top: 50%;
