@@ -1,0 +1,139 @@
+
+    .formularz 
+    {
+	background-color:white;
+    border:2px solid #02639a;
+    border-radius:10px;
+    padding:20px;	
+    margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	width: 650px;
+    }
+	
+    .formularz label 
+    {
+    text-transform:uppercase;
+    }
+		
+	.formularz input{
+	padding:10px;
+    border-radius:5px;
+    order:1px solid #c2c2c2;
+    font-family:Carme;
+    font-size:17px;
+    color: #000000;
+	}
+		
+		
+    .formularz input#nazwisko , .formularz input#imie, 
+    .formularz input#email, .formularz input#wiadomosc,
+	.formularz input#telefon
+    {
+    margin-bottom:25px;
+    width:550px;  
+    }
+		
+    .formularz input#miejscowosc
+	{
+	margin-bottom:25px;
+    width:280px;
+	}
+	
+	.formularz input#ulica
+	{
+	margin-bottom:25px;
+    width:120px;
+	}
+		
+	.formularz input#numerdomu
+	{
+	margin-bottom:25px;
+    width:95px;
+	}
+		
+	.formularz input#kodpocztowy
+	{
+	margin-bottom:25px;
+    width:222px;
+	}
+		
+	.formularz input#miasto
+	{
+	margin-bottom:25px;
+    width:300px;
+	}
+		
+	.formularz select#platnosc
+    {
+    padding:10px;
+    border-radius:5px;
+    border:1px solid #c2c2c2;
+    margin-bottom:25px;
+    width:400px;
+    font-family:Carme;
+    font-size:17px;
+	color: #000000;
+	background-color: #ffffff;
+    }
+	
+	.center
+    {
+	margin-top:40px;
+	margin-bottom:40px;
+	font-family: Carme;
+    font-style: normal;
+    font-weight: normal;
+	margin-left: auto;
+	margin-right: auto;
+    font-size: 20px;
+    text-align: center;
+	color: #000000;
+	width:730px;
+    }
+		
+	.h3
+    {
+	font-family:Carme,sans-serif;
+	font-weight: bold;
+    font-size: 17px;       
+	color: #000000;
+    }
+
+	.button-add 
+	{
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    margin-left:30px; 
+    margin-bottom:40px;		
+    }  
+	
+	.image-button
+	{
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffcc80;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+	}
+		
+	.image-button:hover 
+	{
+    background-color: #ff9900;
+    box-shadow: 0px 15px 20px rgb(255, 224, 179);
+    color: #ffffff;
+    transform: translateY(-7px);
+	}
